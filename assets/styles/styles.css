@@ -495,3 +495,15 @@ nav {
       border-color: transparent #F45B69 transparent transparent;
     }
   }
+
+   
+    @media screen and (min-width: max-width: 900px) {
+        .btn-responsive { 
+            font-size: 100%;
+        };
+    }
+    @media screen and (max-width: 600px) {
+        .btn-responsive {
+            font-size: 80%;
+        };
+    }
