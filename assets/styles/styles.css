@@ -129,7 +129,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fa {
-	font-size: 1.2em;
 	padding: 0.1em 0.4em;
 	color: #8a8a8a;
 }
@@ -464,8 +463,11 @@ nav {
   }
   
   .fi-heart {
-    color: #ff7654;
+    color: #FC7252;
   }
+
+
+ 
   /* GENERAL MEDIA QUERIES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   
@@ -483,6 +485,7 @@ nav {
     .timeline ul li {
       margin-left: 20px;
     }
+   
     .timeline ul li div {
       width: calc(100vw - 91px);
     }
@@ -492,11 +495,17 @@ nav {
     .timeline ul li:nth-child(even) div::before {
       left: -15px;
       border-width: 8px 16px 8px 0;
-      border-color: transparent #F45B69 transparent transparent;
+      border-color: transparent #FC7252 transparent transparent;
     }
   }
 
-   
+  /* @media screen and (max-width: 480px) {
+  .timeline ul li {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+  }
+  } */
     @media screen and (min-width: max-width: 900px) {
         .btn-responsive { 
             font-size: 100%;
@@ -507,3 +516,6 @@ nav {
             font-size: 80%;
         };
     }
+
+
+   

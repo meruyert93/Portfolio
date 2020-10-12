@@ -62,7 +62,8 @@ const Portfolio = function() {
 			// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
 			stringsElement: null,
 			// typing speed
-			typeSpeed: 1,
+            typeSpeed: 50,
+            backSpeed: 10,
 			contentType: 'text',
 			callback: function() {
 				$("#writing-text").css({"color": "#fff", "background-color": "#C8412B"});
@@ -94,13 +95,19 @@ Portfolio.typeAnimation();
     // check if an element is in viewport
     // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
     function isElementInViewport(el) {
+
+
       var rect = el.getBoundingClientRect();
       return (
         rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
+      ) || (
+        rect.top <= 0 &&
+        rect.bottom >= (window.innerHeight || document.documentElement.clientHeight)
+      )
+
     }
   
     function callbackFunc() {
@@ -110,6 +117,7 @@ Portfolio.typeAnimation();
         }
       }
     }
+
   
     // listen for events
     window.addEventListener("load", callbackFunc);
