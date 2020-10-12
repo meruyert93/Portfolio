@@ -466,7 +466,6 @@ nav {
     color: #FC7252;
   }
 
-
  
   /* GENERAL MEDIA QUERIES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -478,6 +477,10 @@ nav {
     .timeline ul li:nth-child(even) div {
       left: -289px;
       /*250+45-6*/
+    }
+
+    .timeline {
+        overflow-x: hidden;
     }
   }
   
@@ -499,6 +502,7 @@ nav {
     }
   }
 
+
   /* @media screen and (max-width: 480px) {
   .timeline ul li {
   transform: none;
@@ -517,5 +521,3 @@ nav {
         };
     }
 
-
-   
